@@ -10,6 +10,7 @@ import { Contact } from "@/components/Contact";
 import { Navigation } from "@/components/Navigation";
 import { SpaceBackground } from "@/components/SpaceBackground";
 import { Chatbot } from "@/components/Chatbot";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("hero");
@@ -70,6 +71,7 @@ const Index = () => {
         </section>
       </main>
 
+      <Footer />
       <Chatbot />
     </div>
   );
