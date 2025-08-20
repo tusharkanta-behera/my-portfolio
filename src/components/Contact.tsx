@@ -128,7 +128,7 @@ export const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform md:hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -154,34 +154,37 @@ export const Contact = () => {
                 
                 <div className="space-y-4">
                   {/* Email */}
-                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-red-500 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300 md:hover:scale-105 cursor-pointer">
+                    <a 
+                      href="mailto:tusharkantabehera85@gmail.com?subject=Portfolio%20Contact&body=Hi%20Tusharkanta,%0D%0A%0D%0AI%20would%20like%20to%20discuss..." 
+                      className="flex items-center space-x-4 w-full"
+                    >
+                      <div className="p-3 bg-red-500 rounded-lg md:group-hover:scale-110 transition-transform duration-300">
                         <Mail className="w-6 h-6 text-white" />
                       </div>
-                      <div className="flex-1">
+                      <div className="flex-1 min-w-0">
                         <p className="text-white font-semibold mb-1">Email</p>
-                        <p className="text-gray-300 text-sm group-hover:text-white transition-colors duration-300">
+                        <p className="text-gray-300 text-sm md:group-hover:text-white transition-colors duration-300 truncate">
                           tusharkantabehera85@gmail.com
                         </p>
                       </div>
-                    </div>
+                    </a>
                   </div>
 
                   {/* GitHub */}
-                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-gray-400/50 hover:bg-gray-600/10 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-gray-400/50 hover:bg-gray-600/10 transition-all duration-300 md:hover:scale-105 cursor-pointer">
                     <a 
                       href="https://github.com/tusharkanta-behera" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-4"
+                      className="flex items-center space-x-4 w-full"
                     >
-                      <div className="p-3 bg-gray-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="p-3 bg-gray-600 rounded-lg md:group-hover:scale-110 transition-transform duration-300">
                         <Github className="w-6 h-6 text-white" />
                       </div>
-                      <div className="flex-1">
+                      <div className="flex-1 min-w-0">
                         <p className="text-white font-semibold mb-1">GitHub</p>
-                        <p className="text-gray-300 text-sm group-hover:text-white transition-colors duration-300">
+                        <p className="text-gray-300 text-sm md:group-hover:text-white transition-colors duration-300 truncate">
                           github.com/tusharkanta-behera
                         </p>
                       </div>
@@ -189,20 +192,20 @@ export const Contact = () => {
                   </div>
 
                   {/* LinkedIn */}
-                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                  <div className="group bg-gray-800/30 border border-gray-700/50 rounded-xl p-4 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 md:hover:scale-105 cursor-pointer">
                     <a 
-                      href="https://linkedin.com/in/tusharkanta-behera-7a3011294" 
+                      href="https://linkedin.com/in/tusharkanta-behera/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-4"
+                      className="flex items-center space-x-4 w-full"
                     >
-                      <div className="p-3 bg-blue-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="p-3 bg-blue-600 rounded-lg md:group-hover:scale-110 transition-transform duration-300">
                         <Linkedin className="w-6 h-6 text-white" />
                       </div>
-                      <div className="flex-1">
+                      <div className="flex-1 min-w-0">
                         <p className="text-white font-semibold mb-1">LinkedIn</p>
-                        <p className="text-gray-300 text-sm group-hover:text-white transition-colors duration-300">
-                          linkedin.com/in/tusharkanta-behera-7a3011294
+                        <p className="text-gray-300 text-sm md:group-hover:text-white transition-colors duration-300 truncate">
+                          linkedin.com/in/tusharkanta-behera/
                         </p>
                       </div>
                     </a>

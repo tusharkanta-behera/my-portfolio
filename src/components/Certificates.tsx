@@ -9,7 +9,7 @@ export const Certificates = () => {
     {
       title: "Prompt Engineering",
       issuer: "Infosys",
-      date: "June 22, 2025",
+
       description: "Advanced prompt engineering techniques and AI optimization",
       color: "from-blue-500 to-cyan-500",
       image: "/lovable-uploads/c78081a4-cd17-432d-8d79-48bf129e9123.png",
@@ -18,7 +18,7 @@ export const Certificates = () => {
     {
       title: "Learning Microsoft Power BI",
       issuer: "Infosys",
-      date: "June 23, 2025",
+
       description: "Data visualization and business intelligence with Power BI",
       color: "from-purple-500 to-indigo-500",
       image: "/lovable-uploads/266787b3-5b93-4f35-85ee-e85550055da3.png",
@@ -27,7 +27,7 @@ export const Certificates = () => {
     {
       title: "Excel",
       issuer: "Infosys",
-      date: "June 21, 2025",
+
       description: "Advanced Excel skills for data analysis and visualization",
       color: "from-green-500 to-teal-500",
       image: "/lovable-uploads/93037309-e345-4e55-b3bb-f265b1294a6c.png",
@@ -36,7 +36,7 @@ export const Certificates = () => {
     {
       title: "Foundations of Cybersecurity",
       issuer: "Google via Coursera",
-      date: "Dec 29, 2023",
+ 
       description: "Core cybersecurity principles and network security fundamentals",
       color: "from-red-500 to-pink-500",
       image: "/lovable-uploads/382424a5-2727-4b5d-ac4c-65863cb85284.png",
@@ -45,7 +45,7 @@ export const Certificates = () => {
     {
       title: "Play It Safe: Manage Security Risks",
       issuer: "Google via Coursera",
-      date: "Mar 20, 2024",
+
       description: "Risk management and security assessment strategies",
       color: "from-orange-500 to-red-500",
       image: "/lovable-uploads/1d15688b-57e7-408b-856c-f24db7e9dbcc.png",
@@ -54,7 +54,7 @@ export const Certificates = () => {
     {
       title: "Connect and Protect: Networks and Network Security",
       issuer: "Google via Coursera",
-      date: "Mar 20, 2024",
+
       description: "Network security architecture and protection mechanisms",
       color: "from-cyan-500 to-blue-500",
       image: "/lovable-uploads/0680a056-4384-4585-8fb1-9c8953f9bc3d.png",
@@ -63,7 +63,7 @@ export const Certificates = () => {
     {
       title: "Web Application Security",
       issuer: "CyberYaan Training & Consultancy",
-      date: "June 30, 2024",
+
       description: "Advanced web application security testing and vulnerability assessment",
       color: "from-indigo-500 to-purple-500",
       image: "/lovable-uploads/b3ac344f-99ce-4399-b990-d7833cba727f.png",
@@ -72,7 +72,7 @@ export const Certificates = () => {
     {
       title: "Network Penetration Testing",
       issuer: "CyberYaan Training & Consultancy",
-      date: "June 30, 2024",
+
       description: "Advanced network penetration testing methodologies and tools",
       color: "from-pink-500 to-red-500",
       image: "/lovable-uploads/4151e235-5e50-46b3-9dfa-7c987d2200b1.png",
@@ -104,7 +104,7 @@ export const Certificates = () => {
 
         <div className="relative max-w-4xl mx-auto">
           {/* 3D Card Stack */}
-          <div className="relative h-96 perspective-1000">
+          <div className="relative min-h-[24rem] sm:min-h-[24rem] md:min-h-[26rem] lg:min-h-[24rem] perspective-1000">
             {certificates.map((cert, index) => {
               const isActive = index === activeIndex;
               const distance = Math.abs(index - activeIndex);
@@ -132,7 +132,7 @@ export const Certificates = () => {
                   onClick={() => setActiveIndex(index)}
                 >
                   <div className={`h-full w-full bg-gradient-to-br ${cert.color} p-1 rounded-2xl`}>
-                    <div className="h-full w-full bg-gray-900/90 backdrop-blur-lg rounded-xl p-8 flex flex-col justify-between relative">
+                    <div className="h-full w-full bg-gray-900/90 backdrop-blur-lg rounded-xl p-6 sm:p-8 flex flex-col relative">
                       <div>
                         <div className="flex items-center justify-between mb-6">
                           <Award className="w-12 h-12 text-white" />
@@ -148,9 +148,8 @@ export const Certificates = () => {
                         <p className="text-gray-400 leading-relaxed">{cert.description}</p>
                       </div>
                       
-                      <div className="flex items-center justify-between">
-                        <span className="text-blue-400 font-medium">{cert.date}</span>
-                        <div className="flex items-center space-x-2">
+                      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 items-end">
+                        <div className="flex items-center justify-end sm:justify-end order-1 sm:order-2 space-x-2">
                           <div className="px-4 py-2 bg-white/10 rounded-lg backdrop-blur-sm">
                             <span className="text-white font-medium">Certified</span>
                           </div>

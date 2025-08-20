@@ -19,7 +19,7 @@ export const About = () => {
     {
       icon: <User className="w-6 h-6" />,
       title: "Prompt Engineering",
-      description: "GPT-4, AI Automation, Conversation Design, ML Optimization"
+      description: "GPT-5, AI Automation, Conversation Design, ML Optimization"
     }
   ];
 
@@ -58,7 +58,7 @@ export const About = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Me</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300">Passionate about technology and innovation</p>
+          <p className="text-lg sm:text-xl text-gray-300"><b><i>I look forward to building innovative solutions that harness data, strengthen cybersecurity, and explore the evolving world of AI. My goal is to work on projects that not only challenge my skills but also make a lasting, positive impact on people and technology.</i></b></p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-16">
@@ -81,13 +81,13 @@ export const About = () => {
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Tusharkanta Behera</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">Tech Enthusiast & Security Researcher</p>
-                  <div className="text-xs sm:text-sm text-gray-400">Hover to learn more</div>
+                  {/* <div className="text-xs sm:text-sm text-gray-400">Hover to learn more</div> */}
                 </div>
 
                 {/* Back of card */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-lg border border-cyan-500/30 rounded-2xl p-6 sm:p-8">
+                <div className="absolute inset-0 backface-hidden rotate-y-180 bg-black rounded-2xl p-6 sm:p-8">
                   <h4 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Professional Bio</h4>
-                  <p className="text-xs sm:text-sm text-gray-300 mb-4 sm:mb-6 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-white mb-4 sm:mb-6 leading-relaxed">
                     Dedicated technology professional with expertise spanning data analytics, cybersecurity, and AI. 
                     Passionate about leveraging cutting-edge technologies to solve complex problems and drive innovation.
                   </p>
@@ -95,7 +95,7 @@ export const About = () => {
                     onClick={downloadResume}
                     className="w-full px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base transform hover:scale-105"
                   >
-                    <Download className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <Download className="w-3 h-3 sm:w-4 sm:w-4" />
                     <span>Download Resume</span>
                   </button>
                 </div>
@@ -137,7 +137,10 @@ export const About = () => {
             {education.map((edu, index) => (
               <div 
                 key={index}
-                className="bg-white/5 backdrop-blur-lg border border-gray-700/30 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-white/5 backdrop-blur-lg border-2 border-[#00f0ff] rounded-xl p-6 transition-all duration-300 hover:transform hover:scale-105"
+                style={{
+                  boxShadow: '0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff'
+                }}
               >
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">

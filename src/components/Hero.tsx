@@ -1,6 +1,5 @@
 
 import { useEffect, useRef } from "react";
-import { ChevronDown } from "lucide-react";
 
 export const Hero = () => {
   const avatarRef = useRef<HTMLDivElement>(null);
@@ -73,22 +72,22 @@ export const Hero = () => {
           <div className="text-base sm:text-xl md:text-2xl text-gray-300 space-y-2">
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4">
               <span className="px-2 sm:px-3 py-1 bg-blue-500/20 rounded-full border border-blue-500/30 backdrop-blur-sm text-sm sm:text-base">
-                Data
+                <b>Data</b>
               </span>
               <span className="text-cyan-400 hidden sm:block">•</span>
               <span className="px-2 sm:px-3 py-1 bg-cyan-500/20 rounded-full border border-cyan-500/30 backdrop-blur-sm text-sm sm:text-base">
-                Defense
+                <b>Defense</b>
               </span>
               <span className="text-blue-400 hidden sm:block">•</span>
               <span className="px-2 sm:px-3 py-1 bg-blue-500/20 rounded-full border border-blue-500/30 backdrop-blur-sm text-sm sm:text-base">
-                Dialogue with AI
+                <b>Dialogue with AI</b>
               </span>
             </div>
           </div>
 
           <p className="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-4">
-            Passionate tech enthusiast specializing in Data Analytics, Cyber Security, and Prompt Engineering. 
-            Transforming data into insights, securing digital landscapes, and pioneering AI interactions.
+            <b><i>Passionate tech enthusiast specializing in Data Analytics, Cyber Security, and Prompt Engineering.</i></b> 
+            <b><i>Transforming data into insights, securing digital landscapes, and pioneering AI interactions.</i></b>
           </p>
 
           {/* CTA Buttons */}
@@ -101,17 +100,14 @@ export const Hero = () => {
             </button>
             <button 
               onClick={downloadResume}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 border border-blue-500/30 text-blue-400 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300 backdrop-blur-sm"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
             >
               Download Resume
             </button>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
-        </div>
+
       </div>
     </div>
   );

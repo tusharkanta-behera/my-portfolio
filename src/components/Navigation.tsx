@@ -38,11 +38,7 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/30' 
-        : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black`}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -66,7 +62,7 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 ${
                   activeSection === item.id
                     ? 'text-blue-400'
-                    : 'text-gray-400 hover:text-white'
+                    : 'text-white hover:text-blue-400'
                 }`}
               >
                 {item.label}
@@ -80,7 +76,7 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
+            className="md:hidden p-2 text-white hover:text-blue-400 transition-colors duration-200"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -88,7 +84,7 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-700/30">
+          <div className="md:hidden py-4 border-t border-gray-700/30 bg-black">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <button
@@ -97,7 +93,7 @@ export const Navigation = ({ activeSection }: NavigationProps) => {
                   className={`text-left px-3 py-2 rounded-lg transition-all duration-200 ${
                     activeSection === item.id
                       ? 'bg-blue-500/20 text-blue-400'
-                      : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+                      : 'text-white hover:bg-gray-800 hover:text-blue-400'
                   }`}
                 >
                   {item.label}
