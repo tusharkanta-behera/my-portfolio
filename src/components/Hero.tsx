@@ -30,7 +30,7 @@ export const Hero = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6">
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6 pt-20 sm:pt-24">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-64 sm:h-64 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
